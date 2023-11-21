@@ -56,7 +56,7 @@ git clone https://github.com/rsimba/docker
 cd docker
 docker build -t network-automation-image .
 ```
-Docker will look for the **Dockerfile** file in the local directory and automatically download (pull) the base image (Ubuntu) from Docker Hub and create a new container instance based on the **Dockerfile** instructions and the specified image.
+Docker will look for the **Dockerfile** file in the local directory and automatically download (pull) the latest base image (Ubuntu) version from Docker Hub and create a new container instance based on the **Dockerfile** instructions and the specified image.
 
 2. Run the docker container:
 ```
