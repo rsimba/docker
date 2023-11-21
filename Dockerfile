@@ -87,6 +87,10 @@ RUN usermod -aG sudo neteng
 # Allow passwordless sudo for the non-root user
 RUN echo 'neteng ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/neteng
 
+# Clean up the apt cache
+RUN apt clean && \
+      rm -rf /tmp/*
+
 # Set the working directory to /app
 WORKDIR /app
 
