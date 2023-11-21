@@ -22,7 +22,7 @@ This Docker Ubuntu image is designed for network automation, troubleshooting, an
    - tftp
    - sftp
 
-3. **System Monitoring and Management Tools:**
+3. **Version Control:**
    - git
 
 4. **Python Libraries for Network Automation:**
