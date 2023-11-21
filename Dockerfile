@@ -57,6 +57,7 @@ RUN apt-get install -y neovim
 # Network Automation Tools and Libraries
 RUN pip3 install \
         netmiko \
+        ansible \
         napalm \
         ncclient \
         paramiko \

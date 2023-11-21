@@ -28,6 +28,7 @@ This Docker Ubuntu image is designed for network automation, troubleshooting, an
 
 4. **Python Libraries for Network Automation:**
    - netmiko
+   - ansible
    - napalm
    - ncclient
    - paramiko
