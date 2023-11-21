@@ -1,5 +1,7 @@
 # Use the official Ubuntu image as the base image
 FROM ubuntu:latest
+
+# Author and Maintainer information
 LABEL author="Ricardo Simba" \
   maintainer="rsimba@me.com"
 
@@ -32,10 +34,8 @@ RUN apt-get install -y \
         ngrep \
         nload \
         telnet \
-        tracepath \
         ftp \
-        tftp \
-        sftp
+        tftp
 
 # System Monitoring and Management Tools
 RUN apt-get install -y \
@@ -58,6 +58,7 @@ RUN apt-get install -y neovim
 
 # Network Automation Tools and Libraries
 RUN pip3 install \
+        ansible \
         netmiko \
         napalm \
         ncclient \
@@ -71,12 +72,7 @@ RUN pip3 install \
         lxml \
         "pyats[full]==23.10" \
         junos-eznc \
-        pyshark \
-        netaddr \
-        pynetbox \
-        ntc-templates \
-        textfsm \
-        ciscoconfparse
+        pyshark
 
 # Create a non-root user
 RUN useradd -ms /bin/bash neteng
@@ -84,12 +80,9 @@ RUN useradd -ms /bin/bash neteng
 # Add the non-root user to the sudo group
 RUN usermod -aG sudo neteng
 
-# Allow passwordless sudo for the non-root user
-RUN echo 'neteng ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/neteng
-
-# Clean up the apt cache
-RUN apt clean && \
-      rm -rf /tmp/*
+# Create the sudoers.d directory and allow passwordless sudo for the non-root user
+RUN mkdir -p /etc/sudoers.d && \
+    echo 'neteng ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/neteng
 
 # Set the working directory to /app
 WORKDIR /app
