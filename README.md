@@ -56,9 +56,8 @@ cd docker
 docker build -t network-automation-image .
 ```
 2. Run Docker Container:
-```
-docker run -it --rm network-automation-image
-```
+`docker run -it --rm network-automation-image`
+
 This will start a container with a Bash shell, providing you access to the installed tools and libraries.
 
 Happy coding!
