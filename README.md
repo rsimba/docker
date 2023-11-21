@@ -18,7 +18,6 @@ This Docker Ubuntu image is designed for network automation, troubleshooting, an
    - ngrep
    - nload
    - telnet
-   - tracepath
    - ftp
    - tftp
    - sftp
