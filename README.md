@@ -56,9 +56,12 @@ git clone https://github.com/rsimba/docker
 cd docker
 docker build -t network-automation-image .
 ```
-2. Run the docker container:
-`docker run -it --rm network-automation-image`
+Docker will automatically download (pull) the base image (Ubuntu) from Docker Hub and create a new container instance based on the specified image.
 
+2. Run the docker container:
+```
+docker run -it --rm network-automation-image
+```
 This will start a container with a Bash shell, providing you access to the installed tools and libraries. The `--rm` option ensures that the container is automatically removed when the user exits the container, preventing it from lingering on the system.
 
 Happy coding!
