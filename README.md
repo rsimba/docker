@@ -50,11 +50,11 @@ This Docker image is designed for network automation, troubleshooting, and progr
 ## Usage:
 
 1. **Build Docker Image:**
-   ```
+```
 git clone https://github.com/rsimba/docker
 cd docker
 docker build -t network-automation-image .
-   ```
+```
 2. Run Docker Container:
 ```
 docker run -it --rm network-automation-image
