@@ -52,7 +52,7 @@ This Docker Ubuntu image is designed for network automation, troubleshooting, an
 1. **Build docker image:**
 ```
 git clone https://github.com/rsimba/docker
-cd docker
+cd docker/ubuntu
 docker build -t network-automation-image .
 ```
 Docker will look for the **Dockerfile** file in the local directory and automatically download (pull) the latest base image (Ubuntu) version from Docker Hub and create a new container instance based on the **Dockerfile** instructions and the specified image.
