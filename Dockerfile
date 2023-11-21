@@ -1,5 +1,7 @@
 # Use the official Ubuntu image as the base image
 FROM ubuntu:latest
+LABEL author="Ricardo Simba" \
+  maintainer="rsimba@me.com"
 
 # Set noninteractive mode to prevent timezone prompt during installation
 ENV DEBIAN_FRONTEND=noninteractive
