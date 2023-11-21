@@ -30,10 +30,8 @@ RUN apt-get install -y \
         ngrep \
         nload \
         telnet \
-        tracepath \
         ftp \
         tftp \
-        sftp
 
 # System Monitoring and Management Tools
 RUN apt-get install -y \
