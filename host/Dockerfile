@@ -1,12 +1,12 @@
+# Use the official Ubuntu image as the base image
+FROM ubuntu:latest
+
 # Set the name of the Docker container
 LABEL name="net-toolbox"
 
 # Author and Maintainer information
 LABEL author="Ricardo Simba" \
       maintainer="rsimba@me.com"
-
-# Use the official Ubuntu image as the base image
-FROM ubuntu:latest
 
 # Set noninteractive mode to prevent timezone prompt during installation
 ENV DEBIAN_FRONTEND=noninteractive
