@@ -42,7 +42,6 @@ RUN pip3 install \
         "pyats[full]==23.10" \
         junos-eznc \
         pyshark \
-        ansible \
         netaddr \
         pynetbox \
         ntc-templates \
