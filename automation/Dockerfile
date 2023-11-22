@@ -26,7 +26,7 @@ RUN apt-get install -y \
 # Upgrade pip to the latest version for Python 3
 RUN pip3 install --upgrade pip
 
-# Install Python libraries for network automation
+# Install additional Python libraries for network automation
 RUN pip3 install \
         netmiko \
         napalm \
@@ -39,9 +39,6 @@ RUN pip3 install \
         passlib \
         pyyaml \
         lxml \
-        "pyats[full]==23.10" \
-        junos-eznc \
-        pyshark \
         netaddr \
         pynetbox \
         ntc-templates \
