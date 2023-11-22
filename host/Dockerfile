@@ -1,5 +1,5 @@
 # Set the name of the Docker container
-LABEL name="net-tools-container"
+LABEL name="net-toolbox"
 
 # Author and Maintainer information
 LABEL author="Ricardo Simba" \
