@@ -2,9 +2,9 @@
 
 This repository contains Dockerfiles for creating different Docker images:
 
-1. **Host image**: An Ubuntu based container image with various network tools and utilities for monitoring and troubleshooting.
-2. **Python Network Automation image**: An Ubuntu based container image equipped with Python and essential network automation libraries.
-3. **Ansible**: An Ansible container image based on Alpine Linux.
+1. **host**: An Ubuntu based container image with various network tools and utilities for monitoring and troubleshooting.
+2. **automation**: An Ubuntu based container image equipped with Python and essential network automation libraries.
+3. **ansible**: An Ansible container image based on Alpine Linux.
 
 ## Host
 
