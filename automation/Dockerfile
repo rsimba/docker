@@ -1,12 +1,9 @@
-# Set the name of the Docker container
-LABEL name="py-net-automation"
+# Use the official Ubuntu image as the base image
+FROM ubuntu:latest
 
 # Author and Maintainer information
 LABEL author="Ricardo Simba" \
       maintainer="rsimba@me.com"
-
-# Set the working directory to /app
-WORKDIR /app
 
 # Install essential system tools for monitoring and management
 RUN apt-get update && \
@@ -45,28 +42,20 @@ RUN pip3 install \
         "pyats[full]==23.10" \
         junos-eznc \
         pyshark \
-        ansible==<appropriate_version> \
+        ansible \
         netaddr \
         pynetbox \
         ntc-templates \
-        textfsm \
-        ciscoconfparse
+        textfsm
 
-# Create a non-root user for running the container
-RUN useradd -ms /bin/bash neteng
-
-# Add the non-root user to the sudo group
-RUN usermod -aG sudo neteng
-
-# Allow passwordless sudo for the non-root user
-RUN echo 'neteng ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/neteng
+# Set up a non-root user named "neteng" and give it sudo privileges without a password prompt
+RUN useradd -ms /bin/bash neteng && \
+    usermod -aG sudo neteng && \
+    echo "neteng ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # Switch to the non-root user
 USER neteng
 
-# Define environment variable
-ENV NAME World
-
-# Command to run on container start
-CMD ["bash", "-c", "echo Hello $NAME"]
+# Set the working directory to /app
+WORKDIR /app
 
