@@ -38,6 +38,7 @@ This Dockerfile builds a container image based on Ubuntu that includes a collect
 This Dockerfile builds a container image based on Ubuntu that includes a collection of Python Network Libraries for Network Programmability and Automation.
 
 ### Included Tools:
+- git
 - netmiko
 - napalm
 - ncclient
