@@ -77,5 +77,11 @@ docker run -it --rm host-image
 ```
 This will start a container with a Bash shell, providing you access to the installed tools and libraries. The `--rm` option ensures that the container is automatically removed when the user exits the container, preventing it from lingering on the system.
 
+3. Access the docker container:
+```
+docker exec -it host-mage /bin/bash
+```
+The `-it` option allows you to interact with the container's shell.
+
 Happy coding!
 
