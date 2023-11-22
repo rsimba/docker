@@ -1,9 +1,6 @@
 # Use the official Ubuntu image as the base image
 FROM ubuntu:latest
 
-# Set the name of the Docker container
-LABEL name="net-toolbox"
-
 # Author and Maintainer information
 LABEL author="Ricardo Simba" \
       maintainer="rsimba@me.com"
@@ -20,7 +17,6 @@ RUN apt-get update && \
         wget \
         iproute2 \
         openssh-client \
-        # Additional utilities for network analysis and troubleshooting
         nmap \
         tcpdump \
         iperf \
@@ -31,11 +27,8 @@ RUN apt-get update && \
         ngrep \
         nload \
         telnet \
-        tracepath \
         ftp \
         tftp \
-        sftp \
-        # tshark (Wireshark command-line tool)
         tshark && \
     # Clean up
     apt-get clean && \
@@ -57,12 +50,7 @@ RUN apt-get update && \
     apt-get install -y \
         # sudo for privilege management
         sudo \
-        # Man pages and apropos for documentation
-        man \
-        manpages \
-        man-db \
-        apropos && \
-    # Clean up
+        man-db && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -76,4 +64,5 @@ USER neteng
 
 # Set the working directory to /app
 WORKDIR /app
+
 
