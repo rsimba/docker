@@ -7,7 +7,7 @@ This repository contains Dockerfiles for creating different Docker images:
 
 ## Host
 
-This Dockerfile builds an image that includes a collection of network tools and utilities for system monitoring and troubleshooting.
+This Dockerfile builds a container image based on Ubuntu that includes a collection of network tools and utilities for system monitoring and troubleshooting.
 
 ### Included Tools:
 
@@ -28,15 +28,13 @@ This Dockerfile builds an image that includes a collection of network tools and 
 - ngrep
 - nload
 - telnet
-- tracepath
 - ftp
 - tftp
-- sftp
 - tshark
 
 ## Python Network Automation Libraries 
 
-This Dockerfile builds an image that includes a collection of Python Network Libraries for Network Programmability and Automation.
+This Dockerfile builds a container image based on Ubuntu that includes a collection of Python Network Libraries for Network Programmability and Automation.
 
 ### Included Tools:
 - netmiko
@@ -53,12 +51,14 @@ This Dockerfile builds an image that includes a collection of Python Network Lib
 - PyATS
 - Junos-eznc
 - PyShark
-- Ansible
 - Netaddr
 - Pynetbox
 - NTC Templates
 - TextFSM
-- CiscoConfParse
+
+## Ansible
+
+This Dockerfile builds a container image based on Alpine Linux that includes Ansible for Network and Automation.
 
 ## Usage:
 
@@ -66,13 +66,13 @@ This Dockerfile builds an image that includes a collection of Python Network Lib
 ```
 git clone https://github.com/rsimba/docker
 cd docker/host
-docker build -t net-tools-image .
+docker build -t host-image .
 ```
 Docker will look for the **Dockerfile** file in the local directory and automatically download (pull) the latest base image (Ubuntu) version from Docker Hub and create a new container instance based on the **Dockerfile** instructions and the specified image.
 
 2. Run the docker container:
 ```
-docker run -it --rm net-tools-image
+docker run -it --rm host-image
 ```
 This will start a container with a Bash shell, providing you access to the installed tools and libraries. The `--rm` option ensures that the container is automatically removed when the user exits the container, preventing it from lingering on the system.
 
