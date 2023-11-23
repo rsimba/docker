@@ -50,8 +50,7 @@ docker rmi <image_name>:<tag>
 **Note**. Remember to replace `<image_name>` and `<tag>` with the actual name and tag of your Docker image.
 
 ## Containerlab
-
-You can reference your docker images on containerlab's configuration file... More info to come.
+You can reference your Docker images in ContainerLab's configuration file. More information will be provided soon.
 
 Happy coding!
 
