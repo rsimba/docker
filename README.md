@@ -33,5 +33,8 @@ docker exec -it host-mage /bin/bash
 ```
 The `-it` option allows you to interact with the container's shell.
 
+## Containerlab
+You can reference your docker images on containerlab's configuration file... More info to come.
+
 Happy coding!
 
