@@ -1,0 +1,6 @@
+# /etc/freeradius/users
+
+neteng Cleartext-Password := "my_password"
+        Service-Type = Administrative-User,
+        Cisco-AVPair = "shell:priv-lvl=15"
+
