@@ -8,7 +8,10 @@ This is a repository containing Dockerfiles for various Docker images:
 4. **cisco-pyats**: Ubuntu based docker image with Cisco PyATS framework and its dependent libraries.
 5. **juniper-pyez**: Ubuntu based Docker image with Juniper PyEZ library.
 
-# Usage:
+# Usage
+You can build and use the containers with Dockers. You can also leverage Containerlab.
+
+## Docker
 
 1. **Build docker image:**
 ```
