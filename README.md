@@ -1,4 +1,4 @@
-# Docker Containers Repository
+# Docker Containers
 
 This is a repository containing Dockerfiles for various Docker images:
 
