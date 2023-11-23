@@ -8,58 +8,7 @@ This is a repository containing Dockerfiles for various Docker images:
 4. **cisco-pyats**: Ubuntu based docker image with Cisco PyATS framework and its dependent libraries.
 5. **juniper-pyez**: Ubuntu based Docker image with Juniper PyEZ library.
 
-## Host
-
-This Dockerfile builds a container image based on Ubuntu that includes a collection of network tools and utilities for system monitoring and troubleshooting. Included Tools:
-- Git
-- iputils-ping
-- dnsutils
-- curl
-- wget
-- iproute2
-- openssh-client
-- nmap
-- tcpdump
-- iperf
-- traceroute
-- mtr
-- iftop
-- arping
-- ngrep
-- nload
-- telnet
-- ftp
-- tftp
-- tshark
-
-## Python Network Automation Libraries 
-
-This Dockerfile builds a container image based on Ubuntu that includes a collection of Python Network Libraries for Network Programmability and Automation. Included Tools:
-- git
-- netmiko
-- napalm
-- ncclient
-- paramiko
-- nornir
-- jinja2
-- requests
-- scapy
-- passlib
-- pyYAML
-- lxml
-- PyATS
-- Junos-eznc
-- PyShark
-- Netaddr
-- Pynetbox
-- NTC Templates
-- TextFSM
-
-## Ansible
-
-This Dockerfile builds a container image based on Alpine Linux that includes Ansible for Network and Automation.
-
-## Usage:
+# Usage:
 
 1. **Build docker image:**
 ```
