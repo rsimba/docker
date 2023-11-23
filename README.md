@@ -9,6 +9,7 @@ This is a repository containing Dockerfiles for various Docker images:
 5. **juniper-pyez**: Ubuntu based Docker image with Juniper PyEZ library.
 
 # Usage
+
 You can build and use the containers with Dockers. You can also leverage Containerlab.
 
 ## Docker
@@ -22,11 +23,13 @@ docker build -t <image_name>:<tag> .
 Docker will look for the **Dockerfile** file in the local directory and automatically download (pull) the latest base image (Ubuntu) version from Docker Hub and create a new container instance based on the **Dockerfile** instructions and the specified image.
 
 2. **Run the docker container**
+
 Once the image is built, you can run a Docker container from the image:
 ```
 docker run -it --name <container_name> <image_name>:<tag>
 ```
 3. **Access the docker container**
+
 After running the container, you'll be inside the container's command line. You can interact with it just like a regular terminal. If the Dockerfile includes setting up a non-root user, you might be logged in as that user. If not, you might be the root user.
 ```
 docker exec -it <container_name> /bin/bash
@@ -34,6 +37,7 @@ docker exec -it <container_name> /bin/bash
 The `-it` option allows you to interact with the container's shell.
 
 4. **Cleanup**
+
 To stop and remove the running container:
 ```
 docker stop <container_name>
@@ -46,6 +50,7 @@ docker rmi <image_name>:<tag>
 **Note**. Remember to replace `<image_name>` and `<tag>` with the actual name and tag of your Docker image.
 
 ## Containerlab
+
 You can reference your docker images on containerlab's configuration file... More info to come.
 
 Happy coding!
