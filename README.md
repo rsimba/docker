@@ -7,6 +7,9 @@ This is a repository containing Dockerfiles for various Docker images:
 3. **ansible**: An Ansible container image based on Alpine Linux.
 4. **cisco-pyats**: Ubuntu based docker image with Cisco PyATS framework and its dependent libraries.
 5. **juniper-pyez**: Ubuntu based Docker image with Juniper PyEZ library.
+6. **file-server**: Alpine based Docker image with ftp, tftp, and sftp.
+7. **nac-server**: Ubuntu based Docker image with RADIUS and TACACS+.
+8. **syslog-server**: Alpine based Docker image with Syslog-ng.
 
 # Usage
 
