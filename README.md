@@ -1,6 +1,6 @@
 # Docker Containers
 
-This is a repository containing Dockerfiles for various Network Service and automation Docker images:
+This is a repository containing Dockerfiles for various Network Service and Automation Docker images:
 
 1. **host**: An Ubuntu based container image with various network tools and utilities for monitoring and troubleshooting.
 2. **automation**: An Ubuntu based container image with various Python and essential network automation libraries, including Nornir, Paramiko, Netmiko, and others.
