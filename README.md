@@ -50,7 +50,7 @@ To remove the Docker image:
 ```
 docker rmi <image_name>:<tag>
 ```
-**Note**. Remember to replace `<image_name>` and `<tag>` with the actual name and tag of your Docker image.
+**Note**. Remember to replace `<image_name>` and `<tag>` with the actual name and/or tag of the Docker image.
 
 ## Containerlab
 You can reference your Docker images in ContainerLab's configuration file. More information will be provided soon.
