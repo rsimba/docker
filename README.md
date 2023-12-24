@@ -55,5 +55,5 @@ docker rmi <image_name>:<tag>
 ## Containerlab
 You can reference your Docker images in ContainerLab's configuration file. More information will be provided soon.
 
-Happy coding!
+Happy labing!
 
