@@ -16,7 +16,7 @@ jobs:
       with:
         image: rsimba/host
         registry: ghcr.io
-        dockerfile: docker/host
+        dockerfile: /docker/host/Dockerfile
         directory: docker/host
         tag: latest
         username: ${{ secrets.GHCR_USERNAME }}
