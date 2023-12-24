@@ -31,12 +31,6 @@ jobs:
         docker build ./cisco-pyats --tag ghcr.io/rsimba/cisco-pyats:latest
         docker push ghcr.io/rsimba/cisco-pyats:latest
 
-    - name: build and push file-server image
-      run: |
-        docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
-        docker build ./file-server --tag ghcr.io/rsimba/file-server:latest
-        docker push ghcr.io/rsimba/file-server:latest
-
     - name: build and push juniper-pyez image
       run: |
         docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
