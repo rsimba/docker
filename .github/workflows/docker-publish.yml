@@ -17,6 +17,6 @@ jobs:
     - name: docker build and push host
       run: |
         docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
-        docker build ./host --tag host:latest
+        docker build ./host --tag ghcr.io/rsimba/host:latest
         docker push ghcr.io/rsimba/host:latest
 
