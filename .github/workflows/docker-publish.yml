@@ -12,11 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Docker build and push host
-      uses: mr-smithers-excellent/docker-build-push@v6
-      with:
-        context: ./host
-        image: ghcr.io/rsimba/host:latest
-        registry: ghcr.io
-        username: ${{ secrets.GHCR_USERNAME }}
-        password: ${{ secrets.GHCR_TOKEN }}
+    - name: docker build and push host
+      run: |
+        docker login --username rsimba --password ghcr.io <<<${{ secrets.GHCR_TOKEN }}
+        docker build ./host --tag ghcr.io/rsimba/host:latest
+        docker push ghcr.io/rsimba/host:latest
