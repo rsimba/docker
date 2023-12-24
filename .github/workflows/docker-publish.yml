@@ -19,8 +19,38 @@ jobs:
         docker build ./host --tag ghcr.io/rsimba/host:latest
         docker push ghcr.io/rsimba/host:latest
 
-    - name: build and push ansible docker image
+    - name: build and push  automation image
       run: |
         docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
-        docker build ./ansible --tag ghcr.io/rsimba/ansible:latest
-        docker push ghcr.io/rsimba/host:latest
+        docker build ./automation --tag ghcr.io/rsimba/automation:latest
+        docker push ghcr.io/rsimba/automation:latest
+
+    - name: build and push cisco-pyats image
+      run: |
+        docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
+        docker build ./cisco-pyats --tag ghcr.io/rsimba/cisco-pyats:latest
+        docker push ghcr.io/rsimba/cisco-pyats:latest
+
+    - name: build and push file-server image
+      run: |
+        docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
+        docker build ./file-server --tag ghcr.io/rsimba/file-server:latest
+        docker push ghcr.io/rsimba/file-server:latest
+
+    - name: build and push juniper-pyez image
+      run: |
+        docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
+        docker build ./juniper-pyez --tag ghcr.io/rsimba/juniper-pyez:latest
+        docker push ghcr.io/rsimba/juniper-pyez:latest
+
+    - name: build and push nac-server image
+      run: |
+        docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
+        docker build ./nac-server --tag ghcr.io/rsimba/nac-server:latest
+        docker push ghcr.io/rsimba/nac-server:latest
+
+    - name: build and push syslog-server image
+      run: |
+        docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
+        docker build ./syslog-server --tag ghcr.io/rsimba/syslog-server:latest
+        docker push ghcr.io/rsimba/syslog-server:latest
