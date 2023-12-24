@@ -9,14 +9,12 @@ on:
 jobs:
 
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-    - name: Build and Push Host Docker image
-      uses: mr-smithers-excellent/docker-build-push@v6
-      with:
-        image: rsimba/host
-        registry: ghcr.io
-        dockerfile: rsimba/docker/host:latest
-        tag: latest
-        username: ${{ secrets.GHCR_USERNAME }}
-        password: ${{ secrets.GHCR_TOKEN }}
+    - uses: actions/checkout@v3
+    - name: docker build host
+      run: docker build ./host --file Dockerfile --tag host:$(date +%s)
+    - name: docker push
+      run: docker push host
