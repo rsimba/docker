@@ -9,7 +9,7 @@ on:
 jobs:
 
   build:
-  
+    runs-on: ubuntu-latest
     steps:
     - name: Build and Push Host Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
