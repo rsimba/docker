@@ -12,8 +12,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: docker build and push host
+    
+    - name: build and push host docker image
       run: |
         docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
         docker build ./host --tag ghcr.io/rsimba/host:latest
+        docker push ghcr.io/rsimba/host:latest
+
+    - name: build and push ansible docker image
+      run: |
+        docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
+        docker build ./ansible --tag ghcr.io/rsimba/ansible:latest
         docker push ghcr.io/rsimba/host:latest
