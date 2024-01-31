@@ -10,6 +10,7 @@ This is a repository containing Dockerfiles for various Network Service and Auto
 6. **file-server**: Alpine based Docker image with ftp, tftp, and sftp.
 7. **nac-server**: Ubuntu based Docker image with RADIUS and TACACS+.
 8. **syslog-server**: Alpine based Docker image with Syslog-ng.
+9. **dhcp-server**: Ubuntu based Docker image with DHCP server.
 
 # Usage
 
