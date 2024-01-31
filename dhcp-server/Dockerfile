@@ -23,4 +23,5 @@ RUN adduser -D -s /bin/ash neteng && \
 
 # Switch to the non-root user and run the DHCP server on container startup
 USER neteng
+
 CMD ["dhcpd", "-f", "-d", "--no-pid"]
