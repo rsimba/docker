@@ -48,3 +48,9 @@ jobs:
         docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
         docker build ./syslog-server --tag ghcr.io/rsimba/syslog-server:latest
         docker push ghcr.io/rsimba/syslog-server:latest
+
+    - name: build and push dhcp-server image
+      run: |
+        docker login --username rsimba --password ${{ secrets.GHCR_TOKEN }} ghcr.io
+        docker build ./dhcp-server --tag ghcr.io/rsimba/dhcp-server:latest
+        docker push ghcr.io/rsimba/dhcp-server:latest
